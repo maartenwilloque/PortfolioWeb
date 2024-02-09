@@ -28,5 +28,6 @@ jobs:
       app_location: "Website/src" # App source code path
       api_location: "" # Api source code path - optional
       output_location: "" # Built app content directory - optional
+      cwd: "Website"
 ###### End of Repository/Build Configurations ######
 
