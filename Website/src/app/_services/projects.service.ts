@@ -7,6 +7,11 @@ import { Tag } from '../_models/Tag';
 })
 export class ProjectsService {
 
+
+
+
+  
+
   projects: Project[] = [{
     id: 0,
     name: 'Ample App Angular',
@@ -43,5 +48,24 @@ export class ProjectsService {
     }
 
     return project;
+  }
+
+  getProjectsByFilter(filterTags: Tag[]) {
+    let filteredProjects: Project[] = [];
+
+    this.projects.forEach(function (project) {
+      let foundAll = true
+
+      filterTags.forEach(function (filterTag) {
+        if (project.tags.includes(filterTag) == false) {
+          foundAll = false
+        }
+      });
+      if (foundAll) {
+        filteredProjects.push(project);
+      }
+    }
+    );
+    return filteredProjects;
   }
 }

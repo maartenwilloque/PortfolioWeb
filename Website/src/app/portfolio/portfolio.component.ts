@@ -13,6 +13,10 @@ export class PortfolioComponent implements OnInit {
 
   projects = {} as Project[];
 
+  isCollapsed: boolean = true;
+  filtering: boolean = false
+  typescript: boolean = false
+
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Maarten Willoqué - Portfolio');
   }
@@ -20,4 +24,26 @@ export class PortfolioComponent implements OnInit {
     this.projects = this.projectService.getProjects();
   }
 
+  Filter(){
+    let filterTags : Tag[] = [];
+
+    if(this.typescript){
+      filterTags.push(Tag.TYPESCRIPT);
+    }
+    if(this.typescript){
+      this.filtering = true
+    }
+    else{
+      this.filtering = false
+    }
+    this.projects = this.projectService.getProjectsByFilter(filterTags);
+  }
+
+  ResetFilters(){
+
+    this.filtering = false
+    this.projects = this.projectService.getProjects();
+  }
+
 }
+
