@@ -1,0 +1,16 @@
+nav {
+  background-color: var(--color1);
+}
+
+.text-secondary {
+
+  color: var(--color5) !important;
+  font-size: large;
+
+}
+.navbar-dark {
+  color:var(--color5) !important ;
+}
+.text-dark {
+  color: var(--color3) !important
+}

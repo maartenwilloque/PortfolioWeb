@@ -1,4 +1,10 @@
 .jumbotron {
     padding: 2rem 1rem;
-    background-color: #e9ecef;
+    background-color: #E5E5E5;
+}
+h1 {
+  color: var(--color2);
+}
+h3 {
+  color: var(--color2);
 }

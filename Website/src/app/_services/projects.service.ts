@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../_models/Project';
 import { Tag } from '../_models/Tag';
+import { PTag } from '../_models/PTag';
+import { TagType } from '../_models/TagType';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
 
+  pTags: PTag[] = [
+    { id: "ANGULAR", key: "Angular", color: "red", icon: "", type: TagType.FRAMEWORK },
+    { id: "TYPESCRIPT", key: "TypeScript", color: "darkred", icon: "", type: TagType.LANGUAGE },
+    { id: "PYTHON", key: "Python", color: "green", icon: "", type: TagType.LANGUAGE }
+  ]
 
 
 
-  
 
   projects: Project[] = [{
     id: 0,

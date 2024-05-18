@@ -1,1 +1,147 @@
-<p>resume works!</p>
+<div class="container">
+  <div class="leftPanel">
+    <img src="../../assets/Images/resume.png" />
+
+    <div class="text-center d-md-none">
+      <h1>Maarten Willoqué</h1>
+      <h4>Microsoft Cloud Consultant</h4>
+    </div>
+    <div class="details">
+      <div class="item bottomLineSeparator">
+        <h3 (click)="toggleSection('contact')">
+          CONTACT
+        </h3>
+        <div *ngIf="isSectionVisible('contact')" class="smallText">
+          <p>
+            <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
+            (+32) 472 31 23 55
+          </p>
+          <p>
+            <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+            <a href="willoque_maarten@hotmail.com">
+              willoque_maarten&#64;hotmail.com
+            </a>
+          </p>
+          <p>
+            <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
+            Vosselaar, Belgium
+          </p>
+          <p>
+            <i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/maarten-willoqu%C3%A9-0a781658/">
+              in/MaartenWilloque
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="item bottomLineSeparator">
+        <h3 (click)="toggleSection('languages')">
+          LANGUAGES
+        </h3>
+        <div *ngIf="isSectionVisible('languages')">
+          <ul>
+            <li *ngFor="let language of languages">
+              <span class="itemColor"> {{ language.name }}:</span>
+
+              <span [innerHTML]="getStars(language.score)"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item bottomLineSeparator">
+        <h3 (click)="toggleSection('education')">
+          EDUCATION
+        </h3>
+        <div *ngIf="isSectionVisible('education')">
+          <ul>
+            <li *ngFor="let education of educations;let last = last">
+              <div class="smallText">
+                <div class="bolded white itemColor">
+                  {{education.name}}
+                </div>
+                <div class="pb-2">
+                  {{education.institute}}
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item ">
+        <h3 (click)="toggleSection('knowledge')">
+          KNOWLEDGE
+        </h3>
+        <div *ngIf="isSectionVisible('knowledge')">
+          <ul>
+            <li *ngFor="let knowledge of knowledges;let last = last">
+              <div class="smallText">
+                <div class="bolded white itemColor">
+                  {{knowledge.name}}:
+                </div>
+                <div class="pb-2">
+                  {{knowledge.description}}
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="rightPanel">
+    <div class="d-none d-md-block">
+      <h1>
+        Maarten Willoqué
+      </h1>
+      <div class="smallText">
+        <h3>
+          Microsoft Cloud Consultant
+        </h3>
+      </div>
+    </div>
+    <div class="bottomLineSeparator d-md-none mb-4"></div>
+    <div class="d-md-inline d-none">
+      <div class="spacer">
+        <h3>
+          ABOUT ME
+        </h3>
+        <div class="smallText">
+          <p>
+            I am an enthusiastic consultant with a down-to-earth approach. My years of experience in analyzing,
+            implementing, and optimizing business processes give me quick and clear insights. Learning is a must for me,
+            and I like to stay updated on the newest developments regarding Power Platform, eagerly using that knowledge
+            in my projects. For me, the key to a successful project is clear and open communication and a result that is
+            satisfactory to the customer.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="pt-md-5">
+      <h3 (click)="toggleSection('experience')">
+        EXPERIENCE
+      </h3>
+      <div *ngIf="isSectionVisible('experience')">
+        <ul>
+          <li *ngFor="let experience of experiences">
+            <div class="jobPosition">
+              <span class="bolded">
+                {{experience.function}}
+              </span>
+              <span>
+                {{experience.startDate}} - {{experience.endDate}}
+              </span>
+            </div>
+            <div class="projectName bolded">
+              <span>
+                {{experience.company}}
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

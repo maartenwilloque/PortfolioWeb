@@ -1,6 +1,4 @@
-.container {
-    max-width: 1140px;
-}
+
 
 .tag {
     padding: 0 20px;
@@ -11,6 +9,18 @@
     border-radius: 25px;
     background-color: blue;
     color: white;
-    
+
+
+}
+
+:root {
+  --color1: #14213D;
+  --color2: #000000;
+  --color3: #FCA311;
+  --color4: #E5E5E5;
+  --color5: #FFFFFF;
+}
+body {
+  background-color: #E5E5E5;
 
 }
