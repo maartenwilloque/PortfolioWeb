@@ -1,21 +1,28 @@
-<div class="card shadow text-center" style="max-width: 350px; min-width: 350px;">
-    <div class="card-body">
-        <h5 class="card-title">
-            {{project.name}}
-        </h5>
-        <p class="card-text">
-            {{project.summary}}
-        </p>
-        <button class="btn btn-primary" (click)="OpenProjectModal()">
-            View More
-        </button>
+<div class="card shadow">
+  <div class="card-body d-flex flex-column justify-content-between">
+    <div>
+      <div class="title">
+        {{project.name}}
+      </div>
+      <p class="smallText">
+        {{project.summary}}
+      </p>
     </div>
-    <div class="card-footer">
-        <div class="d-flex flex-wrap justify-content-center">
-
-            <div *ngFor="let tag of project.tags">
-                <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
-            </div>
+    <div class="text-end">
+      <button class="btn" (click)="OpenProjectModal()">
+        View project
+      </button>
+    </div>
+    <hr>
+    <div>
+      <div class="d-flex flex-wrap justify-content-center">
+        <div *ngFor="let tag of project.tags">
+          <!-- <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag.key}}</div> -->
+          <div>
+            <img src="{{tag.icon}}" alt="{{tag.key}}" title="{{tag.key}}">
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -8,6 +8,8 @@ import { Knowledge } from '../_models/Knowledge';
 import { KnowledgeService } from '../_services/knowledge.service';
 import { Experience } from '../_models/Experience';
 import { ExperienceService } from '../_services/experience.service';
+import { PTag } from '../_models/PTag';
+import { Project } from '../_models/Project';
 
 @Component({
   selector: 'app-resume',
@@ -28,14 +30,23 @@ export class ResumeComponent implements OnInit {
     experience: false
   };
 
-  constructor(private titleService: Title, private languageService: LanguageService, private educationService: EducationService, private knowledgeService: KnowledgeService, private experienceService:ExperienceService) {
-    this.titleService.setTitle('Maarten Willoqué - Resume');
+  constructor(private titleService: Title, private languageService: LanguageService, private educationService: EducationService, private knowledgeService: KnowledgeService, private experienceService: ExperienceService) {
+    this.titleService.setTitle('Resume');
   }
   ngOnInit(): void {
-    this.languages = this.languageService.getLanguages()
-    this.educations = this.educationService.getEducations()
-    this.knowledges = this.knowledgeService.getKnowledges()
-    this.experiences = this.experienceService.getExperiences()
+    this.languageService.getLanguages().subscribe(language => {
+      this.languages = language
+    })
+    this.educationService.getEducations().subscribe(educations => {
+      this.educations = educations
+    })
+    this.knowledgeService.getKnowledges().subscribe(knowledge => {
+      this.knowledges = knowledge
+    })
+    this.experienceService.getExperiences().subscribe(experiences => {
+      this.experiences = experiences
+    })
+
     if (window.innerWidth > 768) {
       this.visibleSections = {
         contact: true,

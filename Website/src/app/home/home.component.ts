@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
 
   featuredProject = {} as Project
   constructor(private titleService: Title, private projectService: ProjectsService) {
-    this.titleService.setTitle('Maarten Willoqué - Home');
+    this.titleService.setTitle('Home');
   }
   ngOnInit(): void {
-    this.featuredProject = this.projectService.getProjectById(0);
+    // this.projectService.getProjectById(0);
   }
 
 }

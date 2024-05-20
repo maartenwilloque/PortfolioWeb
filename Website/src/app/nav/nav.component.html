@@ -1,34 +1,6 @@
-<!-- <nav class="navbar-expand-md border-bottom mb-3">
-    <div class="container">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/home" routerLinkActive="text-dark">
-                    Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/portfolio" routerLinkActive="text-dark">
-                    Portfolio
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/resume" routerLinkActive="text-dark">
-                    Resume
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-secondary" routerLink="/contact" routerLinkActive="text-dark">
-                    Contact
-                </a>
-            </li>
-        </ul>
-    </div>
-
-  </nav> -->
-
 <nav class="navbar navbar-expand-md navbar-dark">
   <span class="container">
-    <a class="navbar-brand d-md-none">Menu</a>
+    <a class="navbar-brand d-md-none">Menu / <span>{{currentPage}}</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,19 +8,16 @@
     <div [collapse]="isCollapsed" [isAnimated]="true" class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link text-secondary" routerLink="/home" routerLinkActive="text-dark">Home</a>
+          <a class="nav-link text-secondary" routerLink="/home" routerLinkActive="text-dark" (click)="toggleCollapse()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" routerLink="/portfolio" routerLinkActive="text-dark">Portfolio</a>
+          <a class="nav-link text-secondary" routerLink="/portfolio" routerLinkActive="text-dark" (click)="toggleCollapse()">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" routerLink="/resume" routerLinkActive="text-dark">Resume</a>
+          <a class="nav-link text-secondary" routerLink="/resume" routerLinkActive="text-dark" (click)="toggleCollapse()">Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-secondary" routerLink="/contact" routerLinkActive="text-dark">Stage</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" routerLink="/contact" routerLinkActive="text-dark">Contact</a>
+          <a class="nav-link text-secondary" routerLink="/stage" routerLinkActive="text-dark" (click)="toggleCollapse()">Stage</a>
         </li>
       </ul>
     </div>

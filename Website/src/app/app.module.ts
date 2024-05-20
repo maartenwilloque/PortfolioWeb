@@ -17,6 +17,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectFilterComponent } from './project-filter/project-filter.component';
+import { StageComponent } from './stage/stage.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     ProjectCardComponent,
     ProjectModalComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectFilterComponent,
+    StageComponent
   ],
   imports: [
     BrowserModule,

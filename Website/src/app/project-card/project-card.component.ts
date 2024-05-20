@@ -18,7 +18,7 @@ export class ProjectCardComponent {
 
   OpenProjectModal() {
     const modalOptions: ModalOptions = {
-      class: "modal-lg",
+      class: "modal-xl",
       initialState: {
         project: this.project
       }

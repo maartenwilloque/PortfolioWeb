@@ -138,6 +138,7 @@
     flex-wrap: wrap;
     padding: 0 !important;
     min-height: calc(100vh - 310px);
+    background-color: var(--color1);
   }
 
   .leftPanel {
@@ -234,10 +235,6 @@ h2 {
   border-bottom: 3px solid white;
 }
 
-
-
-
-
 img {
   width: 200px;
   height: 200px;
@@ -256,18 +253,6 @@ img {
 
 .bolded {
   font-weight: bold;
-}
-
-.itemColor {
-  color: var(--color5);
-}
-
-.smallText,
-.smallText span,
-.smallText p,
-.smallText a {
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: justify;
 }
 
 .contactIcon {
@@ -334,24 +319,20 @@ img {
 }
 
 .rightPanel li {
-  /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+
   position: relative;
 
-  /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+
   margin: 0;
   padding-bottom: 1em;
   padding-left: 20px;
 }
 
-/* The actual line being placed before each list item, tweak width and color as appropriate */
-
-
-/* Start the line further down on the first list item */
 .rightPanel li:first-child:before {
   top: 22px;
 }
 
-/* Stop the line short on the final list item */
+
 .rightPanel li:last-child:before {
   height: 0px;
 }

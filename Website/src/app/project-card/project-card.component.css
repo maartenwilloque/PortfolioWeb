@@ -1,0 +1,28 @@
+.title {
+  font-size: x-large;
+  color: var(--color1);
+}
+
+.card {
+  border: 2px solid var(--color4);
+  border-radius: 20px;
+}
+
+.btn {
+  text-decoration: underline;
+  padding-bottom: 0;
+}
+.card-body {
+  padding-bottom: 5px;
+}
+hr {
+  margin-top: 5px;
+  color: var(--color1);
+}
+img {
+  height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+

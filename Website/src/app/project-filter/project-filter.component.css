@@ -1,0 +1,50 @@
+.tag-button {
+  border: none;
+  background-color: transparent;
+  color: var(--color2);
+  cursor: pointer;
+  width: 90%;
+  margin: 2px;
+  text-align: left;
+  padding-left: 20px;
+
+}
+
+.tag-button.active {
+  color: var(--color3);
+}
+
+.text-secondary-modal {
+  color: var(--color2);
+  font-size: large;
+}
+
+.logo {
+  height: 20px;
+  margin-right: 20px;
+}
+
+.modal-header {
+  color: var(--color3);
+  background-color: var(--color1) !important;
+}
+
+.icon {
+  cursor: pointer;
+  color: red;
+
+}
+.filter-heading {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.modal-footer button {
+  border-radius: 20px;
+  background-color: var(--color1);
+  color: var(--color5);
+  width: 50%;
+
+}
