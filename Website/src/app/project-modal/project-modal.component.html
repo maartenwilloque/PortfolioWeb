@@ -1,15 +1,16 @@
 <div class="modal-header filter-heading">
-  <h1><span class="d-none d-md-inline">PROJECT:</span> {{project.name.toUpperCase()}}</h1>
-  <h1><i class="fa fa-close icon"></i></h1>
+  <h2><span class="d-none d-md-inline">PROJECT:</span> {{project.name.toUpperCase()}}</h2>
+  <h2><i class="fa fa-close icon" (click)="close()"></i></h2>
 </div>
 <div class="modal-body">
   <div>
     <div class="text-secondary-modal">GENERAL INFORMATION</div>
-    <div class="infoText">Developer(s): </div>
-    <div class="infoText">Year: </div>
+    <div class="infoText">Developer(s): {{project.developers}} </div>
+    <div class="infoText">Year: {{project.year}} </div>
 
 
-    <div class="infoText">You can find this project on Gitbhub <a href={{project.projectLink}} target="_blank">here</a></div>
+    <div class="infoText">You can find this project on Gitbhub <a href={{project.projectLink}} target="_blank">here</a>
+    </div>
   </div>
   <hr>
   <div>
@@ -24,15 +25,22 @@
   <div>
     <div class="text-secondary-modal">DESCRIPTION</div>
     <!-- <div class="smallText">{{project.description}}</div> -->
-    <div class="infoText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis eleifend. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer.</div>
+    <div class="infoText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Aenean euismod elementum nisi quis eleifend. Aliquet sagittis id consectetur purus
+      ut faucibus pulvinar elementum integer.</div>
   </div>
   <hr>
   <div>
     <div class="text-secondary-modal">IMAGES</div>
-    <carousel>
-      <div *ngFor="let picture in project.pictures">
-        <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
-      </div>
-    </carousel>
+    <div class="d-flex justify-content-center">
+      <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
+        <slide *ngFor="let slide of project.pictures; let index=index">
+          <img [src]="slide" alt="image slide">
+          <div class="carousel-caption">
+          </div>
+        </slide>
+      </carousel>
+    </div>
+
   </div>
 </div>

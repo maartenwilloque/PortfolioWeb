@@ -11,23 +11,27 @@ export class ProjectsService {
   private projects: Project[] = [{
     id: 0,
     name: 'Ample App Angular',
-    summary: 'Test Description',
+    developers: 'Maarten Willoqué',
+    year: 2022,
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     description: '',
     projectLink: '',
     tags: [{ key: 'angular', color: '#dd1b16', icon: '../../assets/Images/angular.svg', type: 'Framework' },
     { key: 'typescript', color: '#3178c6', icon: '../../assets/Images/typescript.svg', type: 'Language' }
     ],
-    pictures: []
+    pictures: ['https://loremflickr.com/640/360','https://loremflickr.com/640/360','https://loremflickr.com/640/360']
 
   },
   {
     id: 1,
     name: 'Ample App Angular 2',
-    summary: 'Test Description',
+    developers: 'Maarten Willoqué',
+    year: 2024,
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     description: '',
     projectLink: '',
     tags: [{ key: 'python', color: '#3776ab', icon: '../../assets/Images/python.svg', type: 'Language' }],
-    pictures: []
+    pictures: ['https://loremflickr.com/640/360','https://loremflickr.com/640/360']
 
   }]
 
