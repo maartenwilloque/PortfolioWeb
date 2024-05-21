@@ -1,23 +1,38 @@
-<div class="modal-header">
-    <h2>{{project.name}}</h2>
-    <button class="btn-close" (click)="bsModalRef.hide()">
-
-    </button>
+<div class="modal-header filter-heading">
+  <h1><span class="d-none d-md-inline">PROJECT:</span> {{project.name.toUpperCase()}}</h1>
+  <h1><i class="fa fa-close icon"></i></h1>
 </div>
 <div class="modal-body">
-    <carousel>
-        <div *ngFor="let picture in project.pictures">
-            <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
-        </div>
-    </carousel>
-    <h3 class="mt-2">Description</h3>
-    <p>{{project.description}}</p>
-    <p>You can find this project on Gitbhub <a href={{project.projectLink}} target="_blank">here</a></p>
+  <div>
+    <div class="text-secondary-modal">GENERAL INFORMATION</div>
+    <div class="infoText">Developer(s): </div>
+    <div class="infoText">Year: </div>
 
-    <hr>
-    <div class="d-flex flexwrap">
-        <div *ngFor="let tag of project.tags">
-            <div class="tag me-2 mb-1" [style.background-color]="tag.color">{{tag}}</div>
-        </div>
+
+    <div class="infoText">You can find this project on Gitbhub <a href={{project.projectLink}} target="_blank">here</a></div>
+  </div>
+  <hr>
+  <div>
+    <div class="text-secondary-modal">USED TECHNOLOGY</div>
+    <div class="d-flex flexwrap pt-2 px-3">
+      <div *ngFor="let tag of project.tags">
+        <div><img src="{{tag.icon}}" class="logo" title="{{tag.key}}"></div>
+      </div>
     </div>
+  </div>
+  <hr>
+  <div>
+    <div class="text-secondary-modal">DESCRIPTION</div>
+    <!-- <div class="smallText">{{project.description}}</div> -->
+    <div class="infoText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis eleifend. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer.</div>
+  </div>
+  <hr>
+  <div>
+    <div class="text-secondary-modal">IMAGES</div>
+    <carousel>
+      <div *ngFor="let picture in project.pictures">
+        <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
+      </div>
+    </carousel>
+  </div>
 </div>

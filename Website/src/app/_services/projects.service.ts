@@ -56,10 +56,10 @@ export class ProjectsService {
       { key: 'vue', color: '#42b883', icon: '../../assets/Images/vue.svg', type: 'Framework' },
       { key: 'spring', color: '#6db33f', icon: '../../assets/Images/spring.svg', type: 'Framework' },
       { key: 'laravel', color: '#ff2d20', icon: '../../assets/Images/laravel.svg', type: 'Framework' },
-      { key: 'asp.net', color: '#512bd4', icon: 'aspnet-icon', type: 'Framework' },
-      { key: 'node.js', color: '#339933', icon: 'nodejs-icon', type: 'Framework' },
-      { key: 'next.js', color: '#000000', icon: 'nextjs-icon', type: 'Framework' },
-      { key: 'flutter', color: '#02569b', icon: 'flutter-icon', type: 'Framework' },
+      { key: 'asp.net', color: '#512bd4', icon: '../../assets/Images/net.svg', type: 'Framework' },
+      { key: 'node.js', color: '#339933', icon: '../../assets/Images/nodejs.svg', type: 'Framework' },
+      { key: 'next.js', color: '#000000', icon: '../../assets/Images/next-js.svg', type: 'Framework' },
+      { key: 'flutter', color: '#02569b', icon: '../../assets/Images/flutter.svg', type: 'Framework' },
   ];
     return of(PTags)
   }

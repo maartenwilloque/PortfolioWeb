@@ -17,6 +17,7 @@
 .text-secondary-modal {
   color: var(--color2);
   font-size: large;
+  font-weight: bold;
 }
 
 .logo {

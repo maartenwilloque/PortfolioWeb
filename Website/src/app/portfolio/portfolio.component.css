@@ -80,7 +80,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 !important;
-    min-height: calc(100vh - 310px);
+    min-height: calc(100vh - 200px);
     background-color: var(--color1);
     align-content: baseline;
   }

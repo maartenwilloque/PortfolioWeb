@@ -1,12 +1,12 @@
 .tag {
-    padding: 0 20px;
-    height: 30px;
-    width: fit-content;
-    font-size: 14px;
-    line-height: 30px;
-    border-radius: 25px;
-    background-color: blue;
-    color: white;
+  padding: 0 20px;
+  height: 30px;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: blue;
+  color: white;
 
 
 }
@@ -18,6 +18,7 @@
   --color4: #E5E5E5;
   --color5: #FFFFFF;
 }
+
 body {
   background-color: #E5E5E5;
 
@@ -27,8 +28,9 @@ body {
 .smallText span,
 .smallText p,
 .smallText a {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: Poppins, sans-serif;
   text-align: justify;
+  font-size: medium;
 }
 
 .text-secondary {
@@ -39,5 +41,12 @@ body {
 
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif !important;
+}

@@ -219,7 +219,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .item {
@@ -291,7 +291,7 @@ img {
 }
 .jobPosition span,
 .projectName span {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .leftPanel,
