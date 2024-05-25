@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="header">
+    <h2> INTERNSHIP</h2>
+    <img src="../../assets/Images/LogoQubix.png" alt="Logo Qubix" class="d-none d-md-inline">
+
+  </div>
+  <div class="body">
+    <div class="infoText contentbox">
+      <p>
+        I completed my internship for my degree at Qubix, a company part of the Cronos Group that specializes in
+        developing solutions using the Microsoft Power Platform. From February 2024 to May 2024, my task was to
+        develop a PCF (PowerApps Component Framework) component for an internal project, designed to facilitate work
+        registration for consultants.
+      </p>
+      <p>
+        As being one of the consultants myself, I understood the challenges and requirements of the work
+        registration process. Knowing this component would be used by my colleagues and me made the project more
+        meaningful and motivating.
+      </p>
+      <p>
+        The PCF component I developed is integrated into an existing application used by our consultants. Its
+        primary function is to provide a better overview of existing registrations and streamline the creation of
+        new ones, saving time and reducing errors.
+      </p>
+      <p>
+        Throughout the development process, I ensured the component was user-friendly and met our consultants'
+        specific needs. I collaborated closely with colleagues to gather feedback and make necessary adjustments,
+        resulting in an effective and efficient final product.
+      </p>
+      <p>
+        Overall, this internship allowed me to apply my technical skills in a real-world setting and gain valuable
+        insights into the practical needs of consultants. It was a rewarding experience that emphasized the
+        importance of developing functional and user-centric solutions.
+      </p>
+    </div>
+    <div class="contentbox">
+      <div class="text-secondary pb-2">USED TECHNOLOGY</div>
+      <div class="d-flex flexwrap pt-2 px-3">
+        <div class="d-flex">
+          <div><img src="../../assets/Images/typescript.svg" class="logo" title="TypeScript"></div>
+          <div><img src="../../assets/Images/react.svg" class="logo" title="React"></div>
+          <div><img src="../../assets/Images/microsoft-power-platform.svg" class="logo" title="Power Platform"></div>
+        </div>
+      </div>
+    </div>
+    <div class="contentbox">
+      <div class="text-secondary pb-2">IMAGES</div>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="../../assets/Images/ScreenshotPCF2.png" alt="Image 2" class="img-fluid">
+          <div class="overlay" (click)="openModal(template, '../../assets/Images/ScreenshotPCF2.png')">Click to
+            Enlarge</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contentbox pb-5">
+      <div class="text-secondary pb-2">DOCUMENTS</div>
+      <table>
+        <tr>
+          <td>Plan of Approach</td>
+          <td><a href="https://example.com/plan_of_approach.docx" target="_blank">Plan of Approach</a></td>
+        </tr>
+        <tr>
+          <td>Plan of Approach (presentation)</td>
+          <td><a href="https://example.com/plan_of_approach_presentation.pptx" target="_blank">Plan of Approach
+              (presentation)</a></td>
+        </tr>
+        <tr>
+          <td>Realisation</td>
+          <td><a href="https://example.com/realisation.pdf" target="_blank">Realisation</a></td>
+        </tr>
+        <tr>
+          <td>Reflection</td>
+          <td><a href="https://example.com/reflection.docx" target="_blank">Reflection</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <ng-template #template>
+    <div class="modal-body text-center">
+      <img [src]="selectedImage" class="img-modal" alt="Selected Image">
+    </div>
+  </ng-template>
+</div>

@@ -251,10 +251,6 @@ img {
   flex-direction: column;
 }
 
-.bolded {
-  font-weight: bold;
-}
-
 .contactIcon {
   width: 20px;
   text-align: center;

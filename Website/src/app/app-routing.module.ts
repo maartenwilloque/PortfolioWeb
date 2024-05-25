@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
-import { StageComponent } from './stage/stage.component';
+import { StageComponent } from './internship/stage.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'portfolio', component: PortfolioComponent},
   {path: 'resume', component: ResumeComponent},
-  {path: 'stage', component: StageComponent},
+  {path: 'internship', component: StageComponent},
   {path: '**', component: HomeComponent, pathMatch:'full'}
 ];
 

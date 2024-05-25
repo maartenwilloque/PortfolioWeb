@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Project } from '../_models/Project';
 import { PTag } from '../_models/PTag';
 import { ProjectsService } from '../_services/projects.service';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { ProjectFilterComponent } from '../project-filter/project-filter.component';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  styleUrls: ['./portfolio.component.css'],
+  animations: [
+    trigger('slideInOut', [
+      state('in', style({
+        transform: 'translateX(0)'
+      })),
+      state('out', style({
+        transform: 'translateX(-100%)'
+      })),
+      transition('out => in', [
+        animate('300ms ease-in-out')
+      ]),
+      transition('in => out', [
+        animate('300ms ease-in-out')
+      ])
+    ])
+  ]
 })
 export class PortfolioComponent implements OnInit {
 
@@ -19,6 +36,7 @@ export class PortfolioComponent implements OnInit {
   filteredProjects: Project[] = [];
   selectedTags: Set<string> = new Set<string>();
   bsModalRef?: BsModalRef;
+  panelState: 'in' | 'out' = 'out';
 
   isCollapsed: boolean = true;
   filtering: boolean = false
@@ -40,7 +58,13 @@ export class PortfolioComponent implements OnInit {
 
       this.languageTags = tags.filter(tag => tag.type === "Language");
     });
+    window.addEventListener('resize', this.updatePanelState.bind(this));
 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.updatePanelState();
   }
 
   openFilterModal(): void {
@@ -81,7 +105,6 @@ export class PortfolioComponent implements OnInit {
     this.filterProjects();
   }
 
-
   filterProjects(): void {
     if (this.selectedTags.size === 0) {
       this.filteredProjects = this.projects;
@@ -106,6 +129,19 @@ export class PortfolioComponent implements OnInit {
     this.projectService.getProjects().subscribe(projects => {
       this.projects = projects;
     });
+  }
+
+  togglePanel() {
+    if (window.innerWidth >= 768) {
+      this.panelState = this.panelState === 'in' ? 'out' : 'in';
+    }
+  }
+
+  updatePanelState() {
+    if (window.innerWidth < 768) {
+      this.panelState = 'in';
+    } else {
+    }
   }
 }
 

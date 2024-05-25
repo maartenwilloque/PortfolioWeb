@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="leftPanel">
+  <div class="leftPanel" [ngClass]="{'full-width': panelState === 'out', 'out': panelState === 'out'}"
+    [@slideInOut]="panelState">
     <div class="filters">
       <div class="item bottomLineSeparator">
         <div class="filter-heading">
@@ -35,22 +36,26 @@
       </div>
     </div>
   </div>
-  <div class="rightPanel">
-    <div>
-      <div class="spacer">
-        <h3>
-          PROJECTS
-        </h3>
-        <div class="smallText">
-          <div class="project-wrapper">
-            <div *ngFor="let project of filteredProjects">
-              <app-project-card [project]="project"></app-project-card>
-            </div>
-          </div>
+  <div class="rightPanel" [ngClass]="{'full-width': panelState === 'out'}">
+    <div class="header d-none d-md-inline">
+      <div class="icon-filter">
+        <i class="fa fa-filter" (click)="togglePanel()"></i>
+      </div>
+      <h2 (click)="togglePanel()">
+        PROJECTS
+      </h2>
+    </div>
+    <div class="d-md-none">
+      <h3>
+        PROJECTS
+      </h3>
+    </div>
+    <div class="smallText">
+      <div class="project-wrapper">
+        <div *ngFor="let project of filteredProjects">
+          <app-project-card [project]="project"></app-project-card>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-

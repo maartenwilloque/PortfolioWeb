@@ -18,7 +18,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectFilterComponent } from './project-filter/project-filter.component';
-import { StageComponent } from './stage/stage.component';
+import { StageComponent } from './internship/stage.component';
 
 @NgModule({
   declarations: [
