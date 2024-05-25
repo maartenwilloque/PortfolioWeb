@@ -82,14 +82,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 
-.header h2 {
+.title h2 {
   display: inline-block;
   position: relative;
   padding-bottom: 10px;
   color: var(--color1);
 }
 
-.header h2::after {
+.title h2::after {
   content: '';
   display: block;
   width: 100%;

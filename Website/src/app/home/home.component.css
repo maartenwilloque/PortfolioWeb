@@ -1,0 +1,48 @@
+@media (min-width:992px) {
+  .subText {
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    font-size: medium;
+    padding-top: 20px;
+
+  }
+}
+
+@media (max-width:992px) {
+  .subText {
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+    font-size: medium;
+    padding-top: 20px;
+
+  }
+}
+
+@media (max-width:768px) {
+  .subText {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    font-size: medium;
+    padding-top: 20px;
+
+  }
+
+}
+
+.container {
+  display: flex;
+  padding: 0 !important;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  padding-top: 8% ;
+
+}
+
+
+

@@ -58,8 +58,13 @@ export class PortfolioComponent implements OnInit {
 
       this.languageTags = tags.filter(tag => tag.type === "Language");
     });
+    this.updatePanelState();
     window.addEventListener('resize', this.updatePanelState.bind(this));
 
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.updatePanelState.bind(this));
   }
 
   @HostListener('window:resize', ['$event'])

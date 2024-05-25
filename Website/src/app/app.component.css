@@ -6,6 +6,7 @@
     border-width: 1px;
     min-height: calc(100vh - 310px);
     padding: 0 !important;
+    position: relative;
   }
   .container {
     width: 100vw !important;
@@ -20,6 +21,7 @@
     border-width: 1px;
     min-height: calc(100vh - 310px);
     padding: 0 !important;
+    position: relative;
   }
   .container {
     width: 90vw !important;
