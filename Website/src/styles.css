@@ -19,10 +19,6 @@
   --color5: #FFFFFF;
 }
 
-body {
-  background-color: #E5E5E5;
-
-}
 
 .smallText,
 .smallText span,
@@ -65,6 +61,7 @@ body {
 body {
   margin: 0;
   font-family: Poppins, sans-serif !important;
+  background-color: #E5E5E5;
 }
 
 html, body { height: 100%; }
