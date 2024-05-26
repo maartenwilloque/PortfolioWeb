@@ -21,8 +21,6 @@
   }
 }
 
-
-
 .filter-heading {
   display: flex !important;
   justify-content: space-between !important;
@@ -55,5 +53,9 @@ h2 {
   padding: 10px 5px 10px 20px;
   text-align: justify;
 }
+
+:host {
+  display: contents;
+  }
 
 

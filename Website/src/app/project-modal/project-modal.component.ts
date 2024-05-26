@@ -8,7 +8,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
   templateUrl: './project-modal.component.html',
   styleUrls: ['./project-modal.component.css'],
   providers: [
-    { provide: CarouselConfig, useValue: { interval: 1500, noPause: false, showIndicators: true } }
+    { provide: CarouselConfig, useValue: { interval: 10000, noPause: false, showIndicators: true } }
  ],
 })
 export class ProjectModalComponent {

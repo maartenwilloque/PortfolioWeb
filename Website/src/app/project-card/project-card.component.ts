@@ -18,7 +18,7 @@ export class ProjectCardComponent {
 
   OpenProjectModal() {
     const modalOptions: ModalOptions = {
-      // class: "modal-xl",
+      class: "modal-dialog-scrollable",
       initialState: {
         project: this.project
       }
@@ -29,6 +29,7 @@ export class ProjectCardComponent {
     this.bsModalRef = this.modalService.show(ProjectModalComponent, modalOptions);
     if (window.innerWidth < 768) {
       this.bsModalRef.setClass('modal-fullscreen')
+
     }else {
       this.bsModalRef.setClass('modal-xl')
     }

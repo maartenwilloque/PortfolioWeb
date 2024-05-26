@@ -17,6 +17,7 @@
     align-items: center;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    position: relative;
 
   }
 
@@ -24,6 +25,7 @@
     width: 60%;
     padding: 1%;
     padding-top: 3%;
+    position: relative;
   }
 
 
@@ -85,11 +87,13 @@
     align-items: center;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    position: relative;
   }
 
   .rightPanel {
     width: 70%;
     padding: 3%;
+    position: relative;
   }
 
 
@@ -152,6 +156,7 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 00px;
     padding-bottom: 0 !important;
+    position: relative;
   }
 
   .rightPanel {
@@ -161,6 +166,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-top: 0 !important;
+    position: relative;
 
 
   }
@@ -331,6 +337,18 @@ img {
 
 .rightPanel li:last-child:before {
   height: 0px;
+}
+
+.download-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--color5);
+}
+
+.download-icon:hover {
+  color: var(--color3);
 }
 
 
