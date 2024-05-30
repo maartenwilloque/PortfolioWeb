@@ -9,7 +9,6 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ResumeComponent } from './resume/resume.component';
-import { ContactComponent } from './contact/contact.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
@@ -19,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectFilterComponent } from './project-filter/project-filter.component';
 import { StageComponent } from './internship/stage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { StageComponent } from './internship/stage.component';
     HomeComponent,
     PortfolioComponent,
     ResumeComponent,
-    ContactComponent,
     ProjectCardComponent,
     ProjectModalComponent,
     FooterComponent,
@@ -43,6 +42,7 @@ import { StageComponent } from './internship/stage.component';
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
