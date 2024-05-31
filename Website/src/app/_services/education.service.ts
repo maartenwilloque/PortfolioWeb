@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Education } from '../_models/Education';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 

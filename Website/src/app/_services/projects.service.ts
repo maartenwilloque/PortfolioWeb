@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Project } from '../_models/Project';
 import { PTag } from '../_models/PTag';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 

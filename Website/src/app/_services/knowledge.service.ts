@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Knowledge } from '../_models/Knowledge';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 
