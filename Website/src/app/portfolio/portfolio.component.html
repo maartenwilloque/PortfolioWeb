@@ -52,9 +52,19 @@
     </div>
     <div class="smallText">
       <div class="project-wrapper">
-        <div *ngFor="let project of filteredProjects">
+        <!-- <div *ngFor="let project of filteredProjects">
           <app-project-card [project]="project"></app-project-card>
-        </div>
+        </div> -->
+        <ng-container *ngIf="filteredProjects.length > 0; else noProjects">
+          <div *ngFor="let project of filteredProjects">
+            <app-project-card [project]="project"></app-project-card>
+          </div>
+        </ng-container>
+        <ng-template #noProjects>
+          <div class="no-projects-message">
+            No projects available
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

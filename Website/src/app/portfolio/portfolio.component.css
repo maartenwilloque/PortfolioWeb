@@ -98,7 +98,6 @@
 
   .project-wrapper div {
     width: 100%;
-    /* 1 column */
   }
 
   .rightPanel h3 {
@@ -186,3 +185,17 @@
 .modal-custom {
   width: 200px;
 }
+
+.no-projects-message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: x-large;
+  color: #666;
+  text-align: center;
+  width: 100%;
+  width: calc(100% - 10px) !important;
+  margin-bottom: 20px !important;
+}
+
