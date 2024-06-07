@@ -36,4 +36,16 @@
     </div>
 
   </div>
+  <hr>
+  <div>
+    <div class="text-secondary-modal">DOCUMENTATION</div>
+    <div class="infoText">
+      <ng-container *ngIf="project.projectLink">
+        <a [href]="project.projectLink" target="_blank">Available documentation</a>
+      </ng-container>
+      <ng-container *ngIf="!project.projectLink">
+        No additional documentation is available
+      </ng-container>
+    </div>
+  </div>
 </div>
